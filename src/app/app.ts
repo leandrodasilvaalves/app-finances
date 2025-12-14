@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
+import { CoreModule } from '@core';
 import { FeaturesModule } from '@features';
 
 @Component({
@@ -7,8 +8,7 @@ import { FeaturesModule } from '@features';
   imports: [
     RouterOutlet,
     FeaturesModule,
-    RouterLinkActive,
-    RouterLink,
+    CoreModule
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
