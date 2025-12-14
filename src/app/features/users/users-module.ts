@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, RouterOutlet } from '@angular/router';
 
 import { Login } from './components/login/login';
-import { LoginRoutes } from './login.routes';
+import { UsersRoutes } from './users.routes';
 
 
 @NgModule({
@@ -13,9 +13,9 @@ import { LoginRoutes } from './login.routes';
   imports: [
     CommonModule,
     RouterOutlet,
-    RouterModule.forChild(LoginRoutes)
+    RouterModule.forChild(UsersRoutes)
   ],
   exports: [
   ]
 })
-export class LoginModule { }
+export class UsersModule { }

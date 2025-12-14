@@ -13,8 +13,8 @@ export const routes: Routes = [
       .then(mod => mod.TransactionsModule)
   },
   {
-    path: 'login',
-    loadChildren: () => import('@features/login/login-module')
-      .then(mod => mod.LoginModule)
+    path: 'users',
+    loadChildren: () => import('@features/users/users-module')
+      .then(mod => mod.UsersModule)
   }
 ];

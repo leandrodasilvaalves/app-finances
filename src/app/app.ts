@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { RouterLinkActive, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { FeaturesModule } from '@features';
 
 @Component({
@@ -7,10 +7,11 @@ import { FeaturesModule } from '@features';
   imports: [
     RouterOutlet,
     FeaturesModule,
-    RouterLinkActive
+    RouterLinkActive,
+    RouterLink,
   ],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
   protected readonly title = signal('Finances');
