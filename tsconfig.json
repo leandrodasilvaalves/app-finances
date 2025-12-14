@@ -13,7 +13,25 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "ES2022",
-    "module": "preserve"
+    "module": "preserve",
+    "baseUrl": "./src",
+    "paths": {
+      "@core": [
+        "app/core/core-module.ts"
+      ],
+      "@features": [
+        "app/features/features-module.ts"
+      ],
+      "@features/login": [
+        "app/features/login/login-module.ts"
+      ],
+      "@features/categories": [
+        "app/features/categories/categories-module.ts"
+      ],
+      "@shared": [
+        "app/shared/shared-module.ts"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
