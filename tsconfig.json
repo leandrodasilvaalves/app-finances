@@ -22,11 +22,17 @@
       "@features": [
         "app/features/features-module.ts"
       ],
+      "@features/*": [
+        "app/features/*"
+      ],
       "@features/login": [
         "app/features/login/login-module.ts"
       ],
       "@features/categories": [
-        "app/features/categories/categories-module.ts"
+        "app/features/categories/categories-module.ts",
+      ],
+      "@features/transactions":[
+        "app/features/transactions/transactions-module.ts"
       ],
       "@shared": [
         "app/shared/shared-module.ts"

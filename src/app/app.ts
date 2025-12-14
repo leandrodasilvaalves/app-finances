@@ -1,14 +1,13 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { LoginModule } from '@features/login';
-import { CategoriesModule } from '@features/categories';
+import { RouterLinkActive, RouterOutlet } from '@angular/router';
+import { FeaturesModule } from '@features';
 
 @Component({
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    LoginModule,
-    CategoriesModule,
+    FeaturesModule,
+    RouterLinkActive
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'

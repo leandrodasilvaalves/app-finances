@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CategoriesModule } from '@features/categories';
 import { LoginModule } from '@features/login';
+import { TransactionsModule } from './transactions/transactions-module';
 
 @NgModule({
   declarations: [],
@@ -12,7 +13,8 @@ import { LoginModule } from '@features/login';
   ],
   exports:[
     CategoriesModule,
-    LoginModule
+    LoginModule,
+    TransactionsModule,
   ]
 })
 export class FeaturesModule { }
