@@ -1,14 +1,14 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CoreModule } from '@core';
-import { FeaturesModule } from '@features';
+import { Footer } from '@core/footer/footer';
+import { Navbar } from '@core/navbar/navbar';
 
 @Component({
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    FeaturesModule,
-    CoreModule
+    Navbar,
+    Footer,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss',

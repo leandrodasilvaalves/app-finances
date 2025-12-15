@@ -3,14 +3,14 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.html',
-  styleUrl: './login.scss',
-  imports:[
+  selector: 'app-users',
+  imports: [
     CommonModule,
-    RouterOutlet,
-  ]
+    RouterOutlet
+  ],
+  templateUrl: './users.html',
+  styleUrl: './users.scss',
 })
-export class Login {
+export class Users {
 
 }

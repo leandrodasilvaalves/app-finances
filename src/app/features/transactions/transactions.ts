@@ -1,8 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-transactions',
-  standalone: false,
+  imports: [
+    CommonModule,
+    RouterOutlet,
+  ],
   templateUrl: './transactions.html',
   styleUrl: './transactions.scss',
 })

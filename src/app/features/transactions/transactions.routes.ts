@@ -1,5 +1,5 @@
 import { Routes } from "@angular/router";
-import { Transactions } from "./components/transactions/transactions";
+import { Transactions } from "./transactions";
 
 export const TransactionsRoutes: Routes = [
   {

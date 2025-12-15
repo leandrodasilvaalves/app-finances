@@ -16,29 +16,14 @@
     "module": "preserve",
     "baseUrl": "./src",
     "paths": {
-      "@core": [
-        "app/core/core-module.ts"
-      ],
       "@core/*":[
         "app/core/*"
-      ],
-      "@features": [
-        "app/features/features-module.ts"
       ],
       "@features/*": [
         "app/features/*"
       ],
-      "@features/users": [
-        "app/features/users/users-module.ts"
-      ],
-      "@features/categories": [
-        "app/features/categories/categories-module.ts",
-      ],
-      "@features/transactions":[
-        "app/features/transactions/transactions-module.ts"
-      ],
-      "@shared": [
-        "app/shared/shared-module.ts"
+      "@shared/*": [
+        "app/shared/*"
       ]
     }
   },

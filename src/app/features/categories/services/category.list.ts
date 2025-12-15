@@ -1,7 +1,11 @@
+import { Injectable } from '@angular/core';
 import { CategoryModel } from 'app/core/models/category.model';
 
+@Injectable({
+  providedIn: 'root'
+})
 export class CategoryList {
-  public getCategories(): Array<CategoryModel>{
+  public getCategories(): Array<CategoryModel> {
     return [
       new CategoryModel(1, "Dados pessoais"),
       new CategoryModel(2, "Despesas Temporárias"),
