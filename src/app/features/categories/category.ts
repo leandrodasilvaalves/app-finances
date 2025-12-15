@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { CategoryList } from '@features/categories/services/category.list';
 import { CategoryModel } from '@core/models/category.model';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { CategoryList } from '@core/services/category.list';
 
 @Component({
   selector: 'app-category',
@@ -14,7 +14,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './category.scss',
 })
 export class Category {
-  
+
   constructor(private categories: CategoryList) { }
 
   getCategories(): Array<CategoryModel> {
