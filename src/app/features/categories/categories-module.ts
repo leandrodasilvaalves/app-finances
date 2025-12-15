@@ -5,6 +5,7 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { Category } from './components/category/category';
 import { CategoryForm } from './components/category-form/category-form';
 import { CategoriesRoutes } from './categories.routes';
+import { CategoryList } from './services/category.list';
 
 
 
@@ -19,6 +20,9 @@ import { CategoriesRoutes } from './categories.routes';
     RouterModule.forChild(CategoriesRoutes)
   ],
   exports: [
+  ],
+  providers:[
+    CategoryList
   ]
 })
 export class CategoriesModule { }
