@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CategoryModel } from '@core/models/category.model';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { CategoryService } from '@core/services/category.service';
+import { CategoryService } from '@core/services/http.clients/category.service';
 
 @Component({
   selector: 'app-category',
