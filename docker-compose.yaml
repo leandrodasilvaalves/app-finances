@@ -1,0 +1,13 @@
+services:
+  mockaco:
+    image: natenho/mockaco:1.9.9
+    container_name: finances.mockaco
+    ports:
+      - 5000:5000
+    volumes:
+      - ./mocks/jsons:/app/Mocks:ro
+      - ./mocks/certs/aspnetapp.pfx:/https/aspnetapp.pfx:ro
+    environment:
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=password123
+      - ASPNETCORE_URLS=http://localhost:5000

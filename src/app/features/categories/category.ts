@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CategoryModel } from '@core/models/category.model';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { CategoryList } from '@core/services/category.list';
+import { CategoryService } from '@core/services/category.service';
 
 @Component({
   selector: 'app-category',
@@ -14,10 +14,21 @@ import { CategoryList } from '@core/services/category.list';
   styleUrl: './category.scss',
 })
 export class Category {
+  categories: Array<CategoryModel> = [];
 
-  constructor(private categories: CategoryList) { }
+  constructor(private categoriesList: CategoryService) {
+    this.loadCategories();
+  }
 
-  getCategories(): Array<CategoryModel> {
-    return this.categories.getCategories();
+  loadCategories() {
+    this.categoriesList.getAll().subscribe({
+      next: (data) => {
+        this.categories = data;
+        console.log('Loaded categories:', this.categories);
+      },
+      error: (err) => {
+        console.error('Error on fetching categories:', err);
+      }
+    })
   }
 }
