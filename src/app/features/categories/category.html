@@ -1,6 +1,7 @@
 <h1 class="h1 mb-4">Lista de categorias</h1>
 <ol class="list-group list-group">
-  <li *ngFor="let categ of categories" class="list-group-item d-flex justify-content-between align-items-start">
+  <li *ngFor="let categ of categories.data"
+    class="list-group-item d-flex justify-content-between align-items-start">
     <div class="ms-2 me-auto">
       <div class="fw-bold">{{ categ.name}}</div>
       Content for list item
@@ -8,4 +9,9 @@
     <span class="badge text-bg-primary rounded-pill">{{ categ.id }}</span>
   </li>
 </ol>
-<router-outlet />
+
+<app-pagination
+  [currentPage]="categories.page"
+  [totalPages]="categories.totalPages"
+  path="/categories"
+  />

@@ -5,32 +5,39 @@
   },
   "response": {
     "status": "200",
-    "body": [
-      {
-        "id": 1,
-        "name": "Despesas pessoais"
-      },
-      {
-        "id": 2,
-        "name": "Despesas Temporárias"
-      },
-      {
-        "id": 3,
-        "name": "Educação"
-      },
-      {
-        "id": 4,
-        "name": "Habitação"
-      },
-      {
-        "id": 5,
-        "name": "Lazer"
-      },
-      {
-        "id": 6,
-        "name": "Transporte"
-      }
-    ],
+    "body": {
+      "page": 1,
+      "totalPages": 5,
+      "totalItems": 6,
+      "pageSize": 10,
+      "hasNextPage": false,
+      "data": [
+        {
+          "id": 1,
+          "name": "Despesas pessoais"
+        },
+        {
+          "id": 2,
+          "name": "Despesas Temporárias"
+        },
+        {
+          "id": 3,
+          "name": "Educação"
+        },
+        {
+          "id": 4,
+          "name": "Habitação"
+        },
+        {
+          "id": 5,
+          "name": "Lazer"
+        },
+        {
+          "id": 6,
+          "name": "Transporte"
+        }
+      ]
+    },
     "Headers": {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "http://localhost:4200"

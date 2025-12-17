@@ -3,11 +3,7 @@ import { CategoryForm } from "./components/category-form/category-form";
 import { Category } from "./category";
 
 export const CategoriesRoutes: Routes = [
-  {
-    path: '',
-    component: Category,
-    children: [
-      { path: 'new', component: CategoryForm }
-    ]
-  }
+  { path: 'new', component: CategoryForm },
+  { path: '', component: Category },
+  { path: ':page', component: Category },
 ];
