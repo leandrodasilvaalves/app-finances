@@ -14,8 +14,8 @@ export class CategoryService {
 
   constructor(private http: HttpClient){}
 
-  public getAll(): Observable<PageModel<CategoryModel>>
+  public getAll(page:number): Observable<PageModel<CategoryModel>>
   {
-    return this.http.get<PageModel<CategoryModel>>(this.apiUrl);
+    return this.http.get<PageModel<CategoryModel>>(`${this.apiUrl}/${page}`);
   }
 }

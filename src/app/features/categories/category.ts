@@ -32,8 +32,7 @@ export class Category implements OnInit {
   }
 
   loadData(page: number): void {
-    console.log('page', page);
-    this.categoriesList.getAll().subscribe({
+    this.categoriesList.getAll(page).subscribe({
       next: (result) => this.categories = result,
       error: (err) => console.error('Error on fetching categories:', err)
     });
