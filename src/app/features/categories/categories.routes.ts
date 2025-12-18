@@ -5,5 +5,4 @@ import { Category } from "./category";
 export const CategoriesRoutes: Routes = [
   { path: 'new', component: CategoryForm },
   { path: '', component: Category },
-  { path: ':page', component: Category },
 ];

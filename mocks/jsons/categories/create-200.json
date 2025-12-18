@@ -1,0 +1,18 @@
+{
+  "request": {
+    "method": "POST",
+    "route": "api/v1/categories"
+  },
+  "response": {
+    "status": "200",
+    "body": {
+      "id": <#= Faker.Random.Int(min:1) #>,
+      "name": "<#= Request.Body["name"] #>",
+      "createdAt": "<#= System.DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss.fff") #>"
+    },
+    "Headers": {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "http://localhost:4200"
+    }
+  }
+}

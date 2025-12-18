@@ -25,7 +25,7 @@ export class Category implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
+    this.route.queryParamMap.subscribe(params => {
       const page = Number(params.get('page')) || 1;
       this.loadData(page);
     });

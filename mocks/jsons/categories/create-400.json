@@ -1,0 +1,22 @@
+{
+  "request": {
+    "method": "POST",
+    "route": "api/v1/categories",
+    "condition": "<#= DateTime.Now.Second % 2 == 0 #>"
+  },
+  "response": {
+    "status": "400",
+    "body": {
+      "errors": [
+        {
+          "code": "SOME_FAKE_ERROR",
+          "message": "Some fake message error"
+        }
+      ]
+    },
+    "Headers": {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "http://localhost:4200"
+    }
+  }
+}

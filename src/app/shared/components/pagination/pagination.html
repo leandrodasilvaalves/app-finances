@@ -2,16 +2,16 @@
   <ul class="pagination">
 
     <li class="page-item" [class.disabled]="currentPage === 1">
-      <a class="page-link" [routerLink]="[path, currentPage - 1]">Previous</a>
+      <a class="page-link" [routerLink]="[path]" [queryParams]="{ page: currentPage - 1 }">Previous</a>
     </li>
 
     <li *ngFor="let i of totalPages | range" class="page-item" [class.active]="i + 1 === currentPage">
 
-      <a class="page-link" [routerLink]="[path, i + 1]">{{ i + 1 }}</a>
+      <a class="page-link" [routerLink]="[path]" [queryParams]="{ page: i + 1 }">{{ i + 1 }}</a>
     </li>
 
     <li class="page-item" [class.disabled]="currentPage === totalPages">
-      <a class="page-link" [routerLink]="[path, currentPage + 1]">Next</a>
+      <a class="page-link" [routerLink]="[path]" [queryParams]="{ page: currentPage + 1 }">Next</a>
     </li>
 
   </ul>
