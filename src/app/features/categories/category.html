@@ -1,17 +1,22 @@
-<h1 class="h1 mb-4">Lista de categorias</h1>
-<ol class="list-group list-group">
-  <li *ngFor="let categ of categories.data"
-    class="list-group-item d-flex justify-content-between align-items-start">
-    <div class="ms-2 me-auto">
-      <div class="fw-bold">{{ categ.name}}</div>
-      Content for list item
-    </div>
-    <span class="badge text-bg-primary rounded-pill">{{ categ.id }}</span>
-  </li>
-</ol>
+<div *ngIf="categories$ | async as result; else loading">
+  <h1 class="h1 mb-4">Lista de categorias</h1>
+  <ol class="list-group list-group">
+    <li *ngFor="let categ of result.data" class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">{{ categ.name}}</div>
+        Content for list item
+      </div>
+      <span class="badge text-bg-primary rounded-pill">{{ categ.id }}</span>
+    </li>
+  </ol>
 
-<app-pagination
-  [currentPage]="categories.page"
-  [totalPages]="categories.totalPages"
-  path="/categories"
-  />
+  <app-pagination [currentPage]="result.currentPage" [totalItems]="result.totalItems"
+    [pageSize]="result.pageSize" path="/categories" />
+</div>
+
+<ng-template #loading>
+  <div class="text-center p-5">
+    <div class="spinner-border" role="status"></div>
+    <p>Carregando categorias...</p>
+  </div>
+</ng-template>

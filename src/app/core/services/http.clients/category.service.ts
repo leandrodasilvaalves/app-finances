@@ -12,10 +12,13 @@ export class CategoryService {
 
   private apiUrl = `${environment.apiBaseUrl}/categories`;
 
-  constructor(private http: HttpClient){}
+  constructor(private http: HttpClient) { }
 
-  public getAll(page:number): Observable<PageModel<CategoryModel>>
-  {
-    return this.http.get<PageModel<CategoryModel>>(`${this.apiUrl}/${page}`);
+  public getAll(page: number): Observable<PageModel<CategoryModel>> {
+    return this.http.get<PageModel<CategoryModel>>(`${this.apiUrl}?page=${page}`);
+  }
+
+  public Create(category: CategoryModel): Observable<CategoryModel> {
+    return this.http.post<CategoryModel>(this.apiUrl, category);
   }
 }

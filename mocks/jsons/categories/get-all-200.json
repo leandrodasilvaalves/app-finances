@@ -1,14 +1,15 @@
 {
   "request": {
     "method": "GET",
-    "route": "api/v1/categories/{page}"
+    "route": "api/v1/categories"
   },
   "response": {
     "status": "200",
+    "delay": 2000,
     "body": {
-      "page": <#=Request.Route["page"] #>,
+      "currentPage": <#=Request.Query["page"] #>,
       "totalPages": 10,
-      "totalItems": 6,
+      "totalItems": 100,
       "pageSize": 6,
       "hasNextPage": false,
       "data": [
