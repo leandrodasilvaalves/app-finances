@@ -5,7 +5,7 @@ import { catchError, throwError } from 'rxjs';
 
 export const errorInterceptor: HttpInterceptorFn = (req, next) => {
   const service = inject(ToastService);
-  
+
   return next(req).pipe(
     catchError((error: HttpErrorResponse) => {
       let errorMessage = 'Ocorreu um erro inesperado';
@@ -22,11 +22,7 @@ export const errorInterceptor: HttpInterceptorFn = (req, next) => {
         errorMessage = error.error.message;
       }
 
-      service.show(errorMessage, {
-        classname: 'bg-danger text-light',
-        delay: 5000,
-        header: 'Erro de API'
-      });
+      service.danger(errorMessage, 'Api Request Error');
       return throwError(() => error);
     })
   );

@@ -5,7 +5,7 @@
   },
   "response": {
     "status": "200",
-    "delay": 2000,
+    "delay": <#=Faker.Random.Int(500,3000) #>,
     "body": {
       "currentPage": <#=Request.Query["page"] #>,
       "totalPages": 10,

@@ -3,7 +3,9 @@
   [class]="toast.classname"
   [autohide]="true"
   [delay]="toast.delay || 5000"
-  (hidden)="service.remove(toast)">
+  (hidden)="service.remove(toast)"
+  >
   <div *ngIf="toast.header" class="fw-bold">{{toast.header}}</div>
   {{toast.body}}
 </ngb-toast>
+

@@ -7,8 +7,29 @@ import { ToastInfoModel } from '@core/models/toastInfo.model';
 export class ToastService {
   toasts: ToastInfoModel[] = []
 
-  show(body: string, options: any = {}): void {
-    this.toasts.push({ body, ...options });
+  show(body: string, header?: string, classname?: string, delay?: number): void {
+    this.toasts.push({
+      body,
+      header,
+      classname: classname ?? 'bg-info text-light',
+      delay
+    });
+  }
+
+  info(body: string, header?: string, delay?: number): void {
+    this.show(body, header, 'bg-info text-light', delay);
+  }
+
+  success(body: string, header?: string, delay?: number): void {
+    this.show(body, header, 'bg-success text-light', delay);
+  }
+
+  warning(body: string, header?: string, delay?: number): void {
+    this.show(body, header, 'bg-warning text-light', delay);
+  }
+
+  danger(body: string, header?: string, delay?: number): void {
+    this.show(body, header, 'bg-danger text-light', delay);
   }
 
   remove(toast: ToastInfoModel): void {
