@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Footer, Navbar } from '@core';
+import { ToastContainer } from '@shared/components/toast/toast-container';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,7 @@ import { Footer, Navbar } from '@core';
     RouterOutlet,
     Navbar,
     Footer,
+    ToastContainer,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
