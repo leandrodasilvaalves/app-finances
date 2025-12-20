@@ -8,10 +8,13 @@ export class ToastService {
   toasts: ToastInfoModel[] = []
 
   show(body: string, header?: string, classname?: string, delay?: number): void {
+    let classes = ['position-fixed', 'top-0', 'end-0', 'p-3', 'm-3'];
+    classes.push(classname ?? 'bg-info text-light');
+
     this.toasts.push({
       body,
       header,
-      classname: classname ?? 'bg-info text-light',
+      classname: classes.join(' '),
       delay
     });
   }
